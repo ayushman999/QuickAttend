@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1008065576275",
+    "project_id": "quickattend-d91ff",
+    "storage_bucket": "quickattend-d91ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008065576275:android:f46f4457285ddab54435a6",
+        "android_client_info": {
+          "package_name": "com.bugslayers.quickattend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008065576275-s1qsnrnbm78tacdgoqk0hilqmkjq8253.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY9BquURbllLDISnjeJQHMCmW3ncMmsqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008065576275-s1qsnrnbm78tacdgoqk0hilqmkjq8253.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
