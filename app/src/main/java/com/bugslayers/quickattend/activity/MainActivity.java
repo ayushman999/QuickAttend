@@ -1,8 +1,10 @@
-package com.bugslayers.quickattend;
+package com.bugslayers.quickattend.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.bugslayers.quickattend.R;
 
 public class MainActivity extends AppCompatActivity {
 
