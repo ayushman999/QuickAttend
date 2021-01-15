@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickAttend">
-        <activity android:name=".activity.AdminStudentsInput">
-
-        </activity>
+        <activity android:name=".activity.AdminStudentsInput"/>
+        <activity android:name=".activity.ViewAttendanceRecords"/>
+        <activity android:name=".activity.Dashboard"/>
+        <activity android:name=".activity.AttendanceView"/>
         <activity android:name=".activity.SwipeList" />
         <activity android:name=".activity.TakeAttendance">
             <intent-filter>
