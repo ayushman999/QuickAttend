@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">QuickAttend</string>
+    <string-array name="Branch">
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>EE</item>
+        <item>ME</item>
+        <item>CE</item>
+        <item>IMsc</item>
+        <item>Archi</item>
+    </string-array>
+
+    <string-array name="Teacher">
+        <item>Ayushman</item>
+        <item>Sameer</item>
+        <item>t2</item>
+        <item>t4</item>
+        <item>t5</item>
+    </string-array>
+
+    <string-array name="Batch">
+        <item>2k17</item>
+        <item>2k18</item>
+        <item>2k19</item>
+        <item>2k20</item>
+    </string-array>
 </resources>
