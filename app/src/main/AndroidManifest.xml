@@ -13,11 +13,7 @@
         <activity android:name=".activity.AddNoticeActivity" />
         <activity android:name=".activity.Admin"></activity>
         <activity android:name=".AdminLoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".students.StudentProfile" />
         <activity android:name=".students.StudentLoginActivity" />
@@ -25,7 +21,13 @@
         <activity android:name=".teachers.TeacherLoginActivity" />
         <activity android:name=".activity.AdminStudentsInput" />
         <activity android:name=".activity.ViewAttendanceRecords" ></activity>
-        <activity android:name=".activity.Dashboard" />
+        <activity android:name=".activity.Dashboard" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.AttendanceView" />
         <activity android:name=".activity.SwipeList" />
         <activity android:name=".activity.TakeAttendance">
