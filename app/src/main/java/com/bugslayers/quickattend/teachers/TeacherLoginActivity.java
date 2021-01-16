@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bugslayers.quickattend.R;
+import com.bugslayers.quickattend.activity.TakeAttendance;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
@@ -25,6 +26,7 @@ public class TeacherLoginActivity extends AppCompatActivity {
     EditText e;
     Button b1;
     String TAG="abcd";
+
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String Email="";
@@ -73,7 +75,7 @@ public class TeacherLoginActivity extends AppCompatActivity {
                     name=teachersName.get(i);
 
                     Log.d(TAG,"Name is "+name);
-                    Intent transfer = new Intent(TeacherLoginActivity.this, TeacherProfile.class);
+                    Intent transfer = new Intent(TeacherLoginActivity.this, TakeAttendance.class);
                     transfer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     transfer.putExtra("NAME",name);
                     startActivity(transfer);

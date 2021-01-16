@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.bugslayers.quickattend.R;
@@ -15,8 +19,11 @@ import com.bugslayers.quickattend.adapter.SwipeAdapter;
 import com.bugslayers.quickattend.model.AttendanceData;
 import com.bugslayers.quickattend.model.NoticeData;
 import com.bugslayers.quickattend.model.Students;
+import com.bugslayers.quickattend.students.StudentLoginActivity;
+import com.bugslayers.quickattend.students.StudentProfile;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -85,5 +92,27 @@ public class NoticeListActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.sign_out_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.sign_out_menu:
+            {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(com.bugslayers.quickattend.activity.NoticeListActivity.this,"Sign out!",Toast.LENGTH_SHORT).show();
+                Intent transfer=new Intent(NoticeListActivity.this, StudentLoginActivity.class);
+                startActivity(transfer);
+                finish() ;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
