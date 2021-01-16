@@ -50,9 +50,9 @@ public class ViewAttendanceRecords extends AppCompatActivity implements AdapterV
             public void onClick(View view) {
                 //uploadInfo();
                 Intent intent = new Intent(ViewAttendanceRecords.this, AttendanceView.class);
-                //intent.putExtra("year", year);
-                //intent.putExtra("branch", branch);
-                //intent.putExtra("teacher", teacher);
+                intent.putExtra("year", year);
+                intent.putExtra("branch", branch);
+                intent.putExtra("teacher", teacher);
                 startActivity(intent);
                 finish();
             }

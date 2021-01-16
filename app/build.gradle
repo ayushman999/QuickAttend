@@ -48,5 +48,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     implementation 'com.android.support:multidex:1.0.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    implementation 'org.apache.poi:poi:3.17'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

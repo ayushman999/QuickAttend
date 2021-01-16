@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">QuickAttend</string>
+    <string name="dateformat">20xx-xx-xx</string>
+    <string name="title">Title</string>
+    <string name="description_text">Description-text</string>
     <string-array name="Branch">
         <item>CSE</item>
         <item>ECE</item>
