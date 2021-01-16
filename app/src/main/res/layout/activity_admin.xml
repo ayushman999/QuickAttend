@@ -6,15 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".activity.Admin">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="114dp"
-        android:layout_marginLeft="114dp"
-        android:layout_marginTop="91dp"
-        android:textSize="24sp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/add_newStudent"
+        android:layout_width="147dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="121dp"
+        android:text="Add Student"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_newTeacher"
+        android:layout_width="140dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="221dp"
+        android:text="Add teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_newStudent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
