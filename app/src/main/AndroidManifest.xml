@@ -9,19 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickAttend">
-        <activity android:name=".activity.NoticeListActivity"/>
+        <activity android:name=".activity.AdminTeachersInput"></activity>
+        <activity android:name=".activity.NoticeListActivity" />
         <activity android:name=".activity.AddNoticeActivity" />
-        <activity android:name=".activity.Admin"></activity>
-        <activity android:name=".AdminLoginActivity" >
-
-        </activity>
+        <activity android:name=".activity.Admin" />
+        <activity android:name=".admin.AdminLoginActivity"></activity>
         <activity android:name=".students.StudentProfile" />
         <activity android:name=".students.StudentLoginActivity" />
+        <activity android:name=".students.StudentRegisterActivity" />
         <activity android:name=".teachers.TeacherProfile" />
         <activity android:name=".teachers.TeacherLoginActivity" />
         <activity android:name=".activity.AdminStudentsInput" />
-        <activity android:name=".activity.ViewAttendanceRecords" ></activity>
-        <activity android:name=".activity.Dashboard" >
+        <activity android:name=".activity.Dashboard" />
+        <activity android:name=".activity.ViewAttendanceRecords" />
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,9 +31,7 @@
         </activity>
         <activity android:name=".activity.AttendanceView" />
         <activity android:name=".activity.SwipeList" />
-        <activity android:name=".activity.TakeAttendance">
-
-        </activity>
+        <activity android:name=".activity.TakeAttendance"></activity>
         <activity android:name=".activity.MainActivity" />
     </application>
 

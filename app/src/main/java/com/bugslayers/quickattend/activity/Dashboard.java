@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bugslayers.quickattend.AdminLoginActivity;
+import com.bugslayers.quickattend.admin.AdminLoginActivity;
 import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.students.StudentLoginActivity;
 import com.bugslayers.quickattend.teachers.TeacherLoginActivity;

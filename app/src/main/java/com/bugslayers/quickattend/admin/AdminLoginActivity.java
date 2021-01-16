@@ -1,4 +1,4 @@
-package com.bugslayers.quickattend;
+package com.bugslayers.quickattend.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.activity.Admin;
-import com.bugslayers.quickattend.activity.AdminStudentsInput;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -32,7 +32,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
         e1=findViewById(R.id.admin_email);
-        b1=findViewById(R.id.enter_admin);
+        b1=findViewById(R.id.admin_login);
         e2=findViewById(R.id.admin_password);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

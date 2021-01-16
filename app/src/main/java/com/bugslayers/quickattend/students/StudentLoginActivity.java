@@ -67,8 +67,8 @@ public class StudentLoginActivity extends AppCompatActivity {
         lSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent transfer = new Intent(TeacherLogin.this, Teacher.class);
-//                startActivity(transfer);
+                  Intent transfer = new Intent(StudentLoginActivity.this,StudentRegisterActivity.class);
+                   startActivity(transfer);
             }
         });
         lLogin.setOnClickListener(new View.OnClickListener() {
@@ -142,14 +142,14 @@ public class StudentLoginActivity extends AppCompatActivity {
     }
 //
 //
-            protected void onStart () {
-                super.onStart();
-                FirebaseUser user = mFirebaseAuth.getCurrentUser();
-                if (user != null) {
-                    Intent transfer = new Intent(this, NoticeListActivity.class);
-                    transfer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(transfer);
-                    finish();
-                }
-            }
+//            protected void onStart () {
+//                super.onStart();
+//                FirebaseUser user = mFirebaseAuth.getCurrentUser();
+//                if (user != null) {
+//                    Intent transfer = new Intent(this, NoticeListActivity.class);
+//                    transfer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    startActivity(transfer);
+//                    finish();
+//                }
+//            }
         }
