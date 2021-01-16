@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickAttend">
+        <activity android:name=".activity.NoticeListActivity"/>
+        <activity android:name=".activity.AddNoticeActivity" />
         <activity android:name=".activity.Admin"></activity>
         <activity android:name=".AdminLoginActivity" />
         <activity android:name=".students.StudentProfile" />

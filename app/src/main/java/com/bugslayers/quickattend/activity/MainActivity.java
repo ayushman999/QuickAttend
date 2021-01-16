@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button dashboard;
     Button formSheet;
-
+    Button noticeView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         dashboard=(Button) findViewById(R.id.dashboard);
         formSheet=(Button) findViewById(R.id.sheet_form);
-
+        noticeView = (Button) findViewById(R.id.view_notices_list);
 
         dashboard.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(transfer);
                 }
             });
+        noticeView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent transfer=new Intent(MainActivity.this, NoticeListActivity.class);
+                startActivity(transfer);
+            }
+        });
 
         }
 }
