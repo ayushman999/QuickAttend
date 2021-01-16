@@ -42,6 +42,9 @@ public class SwipeList extends AppCompatActivity {
     String tempName;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<Students> list=new ArrayList<>();
+    ArrayList<String> name=new ArrayList<>();
+    ArrayList<Integer> roll_num=new ArrayList<>();
+    ArrayList<String> status=new ArrayList<>();
     ArrayList<AttendanceData> attendanceList=new ArrayList<AttendanceData>();
     Button sendData;
     //Firebase firestore
@@ -79,7 +82,9 @@ public class SwipeList extends AppCompatActivity {
         String date= LocalDate.now().toString();
         dataTransfer=firestore.collection(branch).document(year).collection(date).document("Ayushman");
         Map<String,Object> data=new HashMap<>();
-        data.put("list",attendanceList);
+        data.put("name",name);
+        data.put("roll_num",roll_num);
+        data.put("status",status);
         dataTransfer.set(data).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
@@ -146,11 +151,17 @@ public class SwipeList extends AppCompatActivity {
                     list.remove(position);
                     swipeAdapter.notifyItemRemoved(position);
                     attendanceList.add(new AttendanceData(tempName,temp,"Absent"));
+                    name.add(tempName);
+                    roll_num.add(temp);
+                    status.add("Absent");
                     Snackbar.make(recyclerView,tempName+ ": Absent", Snackbar.LENGTH_LONG)
                             .setAction("Undo", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
                                     attendanceList.remove(attendanceList.size()-1);
+                                    name.remove(name.size()-1);
+                                    roll_num.remove(roll_num.size()-1);
+                                    status.remove(status.size()-1);
                                     list.add(position,new Students(tempName,temp));
                                     swipeAdapter.notifyItemInserted(position);
                                 }
@@ -168,11 +179,17 @@ public class SwipeList extends AppCompatActivity {
                     list.remove(position);
                     swipeAdapter.notifyItemRemoved(position);
                     attendanceList.add(new AttendanceData(tempName,temp,"Present"));
+                    name.add(tempName);
+                    roll_num.add(temp);
+                    status.add("Absent");
                     Snackbar.make(recyclerView,tempName+": Present", Snackbar.LENGTH_LONG)
                             .setAction("Undo", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
                                     attendanceList.remove(attendanceList.size()-1);
+                                    name.remove(name.size()-1);
+                                    roll_num.remove(roll_num.size()-1);
+                                    status.remove(status.size()-1);
                                     list.add(position,new Students(tempName,temp));
                                     swipeAdapter.notifyItemInserted(position);
                                 }

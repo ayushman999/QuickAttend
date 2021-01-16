@@ -1,9 +1,13 @@
 package com.bugslayers.quickattend.model;
 
+import java.util.ArrayList;
+
 public class AttendanceData implements Comparable<AttendanceData> {
     private int roll_num;
     private String status;
     private String name;
+    private ArrayList<AttendanceData> list;
+
 
     public AttendanceData(String name,int roll_num, String status) {
         this.roll_num = roll_num;
@@ -33,6 +37,14 @@ public class AttendanceData implements Comparable<AttendanceData> {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public ArrayList<AttendanceData> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<AttendanceData> list) {
+        this.list = list;
     }
 
     @Override
