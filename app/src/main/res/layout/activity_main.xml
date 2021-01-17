@@ -10,7 +10,7 @@
         android:id="@+id/view_notices_list"
         android:layout_width="291dp"
         android:layout_height="63dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="184dp"
         android:text="view Notices"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,24 +20,20 @@
         android:id="@+id/teacher_light_attend"
         android:layout_width="291dp"
         android:layout_height="63dp"
-        android:layout_marginTop="508dp"
+        android:layout_marginTop="40dp"
         android:text="Light Attend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/sheet_form" />
 
     <Button
         android:id="@+id/sheet_form"
         android:layout_width="291dp"
         android:layout_height="63dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
         android:text="form a sheet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dashboard" />
 
@@ -45,14 +41,10 @@
         android:id="@+id/dashboard"
         android:layout_width="291dp"
         android:layout_height="63dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
         android:text="Take Attendance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_notices_list" />
 

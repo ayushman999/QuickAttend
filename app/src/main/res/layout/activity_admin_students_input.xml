@@ -5,67 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.AdminStudentsInput">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_student_roll_num">
+
+
     <Spinner
         android:id="@+id/admin_student_branch"
-        android:layout_width="182dp"
+        android:layout_width="152dp"
         android:layout_height="55dp"
-        android:layout_marginTop="392dp"
         android:background="@drawable/btn_radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginRight="30dp"
+     />
 
     <Spinner
         android:id="@+id/admin_student_year"
-        android:layout_width="182dp"
+        android:layout_width="152dp"
         android:layout_height="55dp"
         android:background="@drawable/btn_radius"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.969"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
+   />
+    </LinearLayout>
 
     <Button
         android:id="@+id/add_student"
         android:layout_width="238dp"
         android:layout_height="62dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginLeft="86dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
 
         android:background="@drawable/btn_radius"
         android:text="Add Student"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766" />
+        app:layout_constraintVertical_bias="0.801" />
 
     <EditText
         android:id="@+id/admin_student_name"
-        android:layout_width="354dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="324dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/btn_radius"
         android:ems="10"
         android:hint="Enter Name"
-        android:textColor="#fff"
         android:inputType="textPersonName"
         android:paddingLeft="40dp"
+        android:textColor="#fff"
         android:textColorHint="#fff"
-        app:layout_constraintBottom_toTopOf="@+id/add_student"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
         android:id="@+id/admin_student_roll_num"
-        android:layout_width="354dp"
-        android:layout_height="69dp"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
         android:background="@drawable/btn_radius"
         android:ems="10"
         android:hint="Enter Roll Number"
@@ -75,10 +77,10 @@
         android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintTop_toBottomOf="@+id/admin_student_name"
+        app:layout_constraintVertical_bias="0.059" />
 
     <TextView
         android:id="@+id/textView9"
@@ -86,9 +88,10 @@
         android:layout_height="54dp"
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
+        android:textColor="@color/ligh_blue"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
         android:text="Add Student"
