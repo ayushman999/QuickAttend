@@ -67,9 +67,9 @@
         android:layout_width="226dp"
         android:layout_height="66dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/dark_blue"
-        android:text="Login"
+
         android:background="@drawable/btn_radius"
+        android:text="Login"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -98,7 +98,8 @@
         android:layout_marginTop="39dp"
         android:layout_marginBottom="145dp"
         android:text="Forgot Password?"
-        android:textColor="@color/dark_blue"
+
+        android:textColor="@color/ligh_blue"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/intentLoginText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +114,10 @@
         android:layout_marginStart="135dp"
         android:layout_marginTop="16dp"
         android:text="Student"
+
         android:textStyle="bold"
+
+        android:textColor="@color/ligh_blue"
         android:textSize="36sp"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
