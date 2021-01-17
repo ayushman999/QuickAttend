@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="#CFEEFA"
     tools:context=".activity.Dashboard">
 
 
@@ -133,6 +134,7 @@
         android:text="Select the account type"
         android:gravity="center"
         android:textStyle="bold"
+        android:textColor="@color/ligh_blue"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
