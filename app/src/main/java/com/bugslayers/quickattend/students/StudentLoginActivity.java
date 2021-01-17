@@ -54,7 +54,6 @@ public class StudentLoginActivity extends AppCompatActivity {
         lPassword = (EditText) findViewById(R.id.login_password);
         lLogin = (Button) findViewById(R.id.login);
         layout = (ConstraintLayout) findViewById(R.id.layout);
-        reset_link = (TextView) findViewById(R.id.reset_link);
         lSignUp = (TextView) findViewById(R.id.intentLoginText);
         visiblePass = (CheckBox) findViewById(R.id.checkbox_loginpass);
         visiblePass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
