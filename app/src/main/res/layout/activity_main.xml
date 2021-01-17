@@ -17,6 +17,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/teacher_light_attend"
+        android:layout_width="291dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="508dp"
+        android:text="Light Attend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/sheet_form"
         android:layout_width="291dp"
         android:layout_height="63dp"

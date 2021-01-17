@@ -80,7 +80,7 @@ public class SwipeList extends AppCompatActivity {
     private void uploadAttendanceData(String branch, String year) {
         Collections.sort(attendanceList);
         String date= LocalDate.now().toString();
-        dataTransfer=firestore.collection(branch).document(year).collection(date).document("Ayushman");
+        dataTransfer=firestore.collection(branch).document(year).collection("Ayushman").document(date);
         Map<String,Object> data=new HashMap<>();
         data.put("name",name);
         data.put("roll_num",roll_num);
@@ -150,7 +150,6 @@ public class SwipeList extends AppCompatActivity {
                     temp=list.get(position).getRoll_num();
                     list.remove(position);
                     swipeAdapter.notifyItemRemoved(position);
-                    attendanceList.add(new AttendanceData(tempName,temp,"Absent"));
                     name.add(tempName);
                     roll_num.add(temp);
                     status.add("Absent");
@@ -158,7 +157,6 @@ public class SwipeList extends AppCompatActivity {
                             .setAction("Undo", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    attendanceList.remove(attendanceList.size()-1);
                                     name.remove(name.size()-1);
                                     roll_num.remove(roll_num.size()-1);
                                     status.remove(status.size()-1);
@@ -181,12 +179,11 @@ public class SwipeList extends AppCompatActivity {
                     attendanceList.add(new AttendanceData(tempName,temp,"Present"));
                     name.add(tempName);
                     roll_num.add(temp);
-                    status.add("Absent");
+                    status.add("Present");
                     Snackbar.make(recyclerView,tempName+": Present", Snackbar.LENGTH_LONG)
                             .setAction("Undo", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    attendanceList.remove(attendanceList.size()-1);
                                     name.remove(name.size()-1);
                                     roll_num.remove(roll_num.size()-1);
                                     status.remove(status.size()-1);

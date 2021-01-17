@@ -108,7 +108,7 @@ public class StudentLoginActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         FirebaseUser user = task.getResult().getUser();
                         if (user != null) {
-                            Intent transfer = new Intent(StudentLoginActivity.this, NoticeListActivity.class);
+                            Intent transfer = new Intent(StudentLoginActivity.this, StudentDashboard.class);
                             transfer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(transfer);
                             finish();

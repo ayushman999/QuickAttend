@@ -1,4 +1,4 @@
-package com.bugslayers.quickattend.activity;
+package com.bugslayers.quickattend.students;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.bugslayers.quickattend.R;
-import com.bugslayers.quickattend.students.StudentAttendanceProfile;
 
 public class StudentCheckAttendance extends AppCompatActivity implements AdapterView.OnItemClickListener {
     EditText rollNumEdit;
