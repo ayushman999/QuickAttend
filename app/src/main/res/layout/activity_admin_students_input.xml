@@ -17,20 +17,20 @@
         app:layout_constraintTop_toBottomOf="@+id/admin_student_roll_num">
 
 
-    <Spinner
-        android:id="@+id/admin_student_branch"
-        android:layout_width="152dp"
-        android:layout_height="55dp"
-        android:background="@drawable/btn_radius"
-        android:layout_marginRight="30dp"
-     />
+        <Spinner
+            android:id="@+id/admin_student_branch"
+            android:layout_width="152dp"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_radius"
+            android:layout_marginRight="30dp"
+            />
 
-    <Spinner
-        android:id="@+id/admin_student_year"
-        android:layout_width="152dp"
-        android:layout_height="55dp"
-        android:background="@drawable/btn_radius"
-   />
+        <Spinner
+            android:id="@+id/admin_student_year"
+            android:layout_width="152dp"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_radius"
+            />
     </LinearLayout>
 
     <Button

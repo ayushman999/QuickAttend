@@ -64,12 +64,14 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_width="226dp"
+        android:layout_height="66dp"
         android:layout_marginBottom="32dp"
+
         android:background="@drawable/btn_radius"
         android:text="Login"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
@@ -96,22 +98,28 @@
         android:layout_marginTop="39dp"
         android:layout_marginBottom="145dp"
         android:text="Forgot Password?"
+
         android:textColor="@color/ligh_blue"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/intentLoginText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.333" />
+
     <TextView
         android:layout_width="140dp"
         android:layout_height="53dp"
         android:layout_marginStart="135dp"
         android:layout_marginTop="16dp"
         android:text="Student"
+
+        android:textStyle="bold"
+
         android:textColor="@color/ligh_blue"
         android:textSize="36sp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="135dp" />

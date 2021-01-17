@@ -17,6 +17,15 @@
         <activity android:name=".activity.LightAttend"></activity>
         <activity android:name=".activity.NoticeListActivity" />
         <activity android:name=".activity.AddNoticeActivity" />
+        <activity android:name=".admin.Admin" >
+
+        </activity>
+
+        <activity android:name=".activity.IntroActivity"/>
+        <activity android:name=".students.StudentViewNoticeActivity"/>
+        <activity android:name=".admin.AdminLoginActivity" >
+
+        </activity>
         <activity android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -25,14 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.IntroActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".students.StudentViewNoticeActivity"/>
-        <activity android:name=".admin.AdminLoginActivity" >
-
-        </activity>
-        <activity android:name=".admin.Admin"/>
         <activity android:name=".students.StudentProfile" />
         <activity android:name=".students.StudentLoginActivity" />
         <activity android:name=".students.StudentRegisterActivity" />
