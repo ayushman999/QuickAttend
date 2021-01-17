@@ -75,8 +75,12 @@ public class AddNoticeActivity extends AppCompatActivity {
                         String formatteddate = df.format(c);
 
                         date = formatteddate;
-                        addNoticeData(date,title,description,teacher);
-
+                        if(title.isEmpty()||description.isEmpty()||teacher.isEmpty()){
+                            Toast.makeText(AddNoticeActivity.this, "enter details", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            addNoticeData(date, title, description, teacher);
+                        }
                     }
                 });
     }

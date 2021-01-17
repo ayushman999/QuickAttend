@@ -43,15 +43,24 @@ public class LightAttend extends AppCompatActivity {
             public void onClick(View v) {
                 exist=false;
                 roomId=roomIdEdit.getText().toString();
-                checkForExistingRoom();            }
+                if (roomId.equals("") ) {
+                    Toast.makeText(LightAttend.this, "enter room ID!", Toast.LENGTH_SHORT).show();
+                } else {
+
+
+                checkForExistingRoom();
+            }}
         });
         enterRoomBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 exist=false;
                 roomId=roomIdEdit.getText().toString();
-                checkExistance();
-
+                if (roomId.equals("") ) {
+                    Toast.makeText(LightAttend.this, "enter room ID!", Toast.LENGTH_SHORT).show();
+                } else {
+                    checkExistance();
+                }
             }
 
 

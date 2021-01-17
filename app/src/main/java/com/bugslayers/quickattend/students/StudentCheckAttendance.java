@@ -45,13 +45,16 @@ public class StudentCheckAttendance extends AppCompatActivity implements Adapter
             @Override
             public void onClick(View v) {
                 roll_num=rollNumEdit.getText().toString();
+                if (roll_num.isEmpty()){
+                    Toast.makeText(StudentCheckAttendance.this, "enter roll No.", Toast.LENGTH_SHORT).show();
+                }else {
                 Intent transfer=new Intent(StudentCheckAttendance.this, StudentAttendanceProfile.class);
                 transfer.putExtra("branch",branch);
                 transfer.putExtra("year",year);
                 transfer.putExtra("roll_num",roll_num);
                 transfer.putExtra("teacher",teacher);
                 startActivity(transfer);
-            }
+            }}
         });
     }
 

@@ -44,7 +44,12 @@ public class StudentLightAttendance extends AppCompatActivity {
             public void onClick(View v) {
                 validity="notDefined";
                 getEditData();
-                checkDatabaseValidity();
+                if(roomId.isEmpty()||name.isEmpty()||phoneNum.isEmpty()){
+                    Toast.makeText(StudentLightAttendance.this, "enter all details", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    checkDatabaseValidity();
+                }
             }
         });
 
