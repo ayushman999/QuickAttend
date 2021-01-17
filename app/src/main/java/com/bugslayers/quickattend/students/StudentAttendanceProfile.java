@@ -64,7 +64,6 @@ public class StudentAttendanceProfile extends AppCompatActivity {
                             position=i;
                         }
                     }
-                    Toast.makeText(StudentAttendanceProfile.this, position+"", Toast.LENGTH_SHORT).show();
                     if(status.get(position).equals("Present"))
                     {
                         present++;
@@ -74,7 +73,6 @@ public class StudentAttendanceProfile extends AppCompatActivity {
                         absent++;
                     }
                 }
-                Toast.makeText(StudentAttendanceProfile.this, present+"\n"+absent, Toast.LENGTH_SHORT).show();
                 calculatePercentage();
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -87,6 +85,10 @@ public class StudentAttendanceProfile extends AppCompatActivity {
     }
 
     private void calculatePercentage() {
+        if(present+absent==0)
+        {
+            return;
+        }
         double percentage=(present*100)/(present+absent);
         if(percentage<75)
         {

@@ -18,11 +18,16 @@ import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.students.StudentLoginActivity;
 import com.bugslayers.quickattend.teachers.TeacherLoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -90,27 +95,24 @@ public class teacherRegisterActivity extends AppCompatActivity {
 //                            if(task.isSuccessful()){
 //                            Toast.makeText(teacherRegisterActivity.this, "problem", Toast.LENGTH_SHORT).show();
 
-                                Map<String,String> student= new HashMap<>();
-                                student.put("name",name);
+                                Map<String,String> teacher= new HashMap<>();
+                                teacher.put("name",name);
+                                teacher.put("email",email);
+                            FirebaseFirestore.getInstance().collection("teacher").add(teacher).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                @Override
+                                public void onSuccess(DocumentReference documentReference) {
+                                    progressDialog.dismiss();
+                                    Toast.makeText(teacherRegisterActivity.this, "Data Uploaded", Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(teacherRegisterActivity.this,  TeacherLoginActivity.class);
+                                    startActivity(intent);
 
-                                FirebaseDatabase.getInstance().getReference("Teachers")
-                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                        .setValue(student).addOnCompleteListener(new OnCompleteListener<Void>(){
-
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        if(task.isSuccessful()){
-                                            Toast.makeText(teacherRegisterActivity.this,"User has been successfully registered",Toast.LENGTH_LONG).show();
-                                            progressDialog.dismiss();
-                                            Intent intent=new Intent(teacherRegisterActivity.this, TeacherLoginActivity.class);
-                                            startActivity(intent);
-                                            
-                                        }else{
-                                            Toast.makeText(teacherRegisterActivity.this,"Failed to register! Try Again!!",Toast.LENGTH_LONG).show();
-                                            progressDialog.dismiss();
-                                        }
-                                    }
-                                });
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(teacherRegisterActivity.this, "Something went wrong...", Toast.LENGTH_SHORT).show();
+                                }
+                            });
 
 //                         }   else{
 //                                Toast.makeText(teacherRegisterActivity.this,"Failed to register! Try Again!!",Toast.LENGTH_LONG).show();
