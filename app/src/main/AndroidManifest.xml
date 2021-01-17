@@ -21,8 +21,11 @@
         <activity android:name=".activity.NoticeListActivity" />
         <activity android:name=".activity.AddNoticeActivity" />
         <activity android:name=".activity.Admin" />
+        <activity android:name=".activity.IntroActivity"/>
+        <activity android:name=".students.StudentViewNoticeActivity"/>
         <activity android:name=".admin.AdminLoginActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
