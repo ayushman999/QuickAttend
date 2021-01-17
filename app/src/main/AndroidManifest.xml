@@ -17,18 +17,22 @@
         <activity android:name=".activity.LightAttend"></activity>
         <activity android:name=".activity.NoticeListActivity" />
         <activity android:name=".activity.AddNoticeActivity" />
-        <activity android:name=".admin.Admin" />
-
-        <activity android:name=".activity.IntroActivity"/>
-        <activity android:name=".students.StudentViewNoticeActivity"/>
-        <activity android:name=".admin.AdminLoginActivity" />
-        <activity android:name=".SplashScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".admin.Admin" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.IntroActivity"/>
+        <activity android:name=".students.StudentViewNoticeActivity"/>
+        <activity android:name=".admin.AdminLoginActivity" >
+
+        </activity>
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         </activity>
         <activity android:name=".students.StudentProfile" />
         <activity android:name=".students.StudentLoginActivity" />
@@ -40,6 +44,7 @@
         <activity android:name=".activity.ViewAttendanceRecords" />
         <activity android:name=".activity.SplashActivity"></activity>
         <activity android:name=".activity.AttendanceView" />
+        <activity android:name=".activity.teacherRegisterActivity" />
         <activity android:name=".activity.SwipeList" />
         <activity android:name=".activity.TakeAttendance" />
         <activity android:name=".activity.MainActivity" />

@@ -9,8 +9,7 @@ import android.widget.Button;
 
 import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.activity.AdminStudentsInput;
-import com.bugslayers.quickattend.activity.AdminTeachersInput;
-import com.bugslayers.quickattend.teachers.teacherRegisterActivity;
+import com.bugslayers.quickattend.activity.teacherRegisterActivity;
 
 
 public class Admin extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.bugslayers.quickattend.teachers;
+package com.bugslayers.quickattend.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.students.StudentLoginActivity;
-import com.bugslayers.quickattend.students.StudentRegisterActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
