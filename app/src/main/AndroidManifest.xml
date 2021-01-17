@@ -9,18 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickAttend">
-        <activity android:name=".students.StudentDashboard"></activity>
+        <activity android:name=".students.StudentDashboard"/>
         <activity android:name=".students.StudentLightAttendance" >
 
         </activity>
         <activity android:name=".activity.LightAttendRoom" />
-        <activity android:name=".activity.LightAttend" >
-
-        </activity>
-        <activity android:name=".activity.AdminTeachersInput" />
+        <activity android:name=".activity.LightAttend"></activity>
         <activity android:name=".activity.NoticeListActivity" />
         <activity android:name=".activity.AddNoticeActivity" />
-        <activity android:name=".activity.Admin" />
+        <activity android:name=".admin.Admin" />
+
         <activity android:name=".activity.IntroActivity"/>
         <activity android:name=".students.StudentViewNoticeActivity"/>
         <activity android:name=".admin.AdminLoginActivity" />
@@ -40,13 +38,13 @@
         <activity android:name=".activity.AdminStudentsInput" />
         <activity android:name=".activity.Dashboard" />
         <activity android:name=".activity.ViewAttendanceRecords" />
-        <activity android:name=".activity.SplashActivity" />
+        <activity android:name=".activity.SplashActivity"></activity>
         <activity android:name=".activity.AttendanceView" />
         <activity android:name=".activity.SwipeList" />
         <activity android:name=".activity.TakeAttendance" />
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".students.StudentCheckAttendance"/>
-        <activity android:name=".students.StudentAttendanceProfile"/>
+        <activity android:name=".students.StudentCheckAttendance" />
+        <activity android:name=".students.StudentAttendanceProfile" />
     </application>
 
 </manifest>
