@@ -129,7 +129,7 @@ public class AttendanceView extends AppCompatActivity implements DatePickerDialo
         FileOutputStream fos = null;
         try {
             File file ;
-            file = new File(getExternalFilesDir(null), branch+date + ".xls");
+            file = new File(getExternalFilesDir(null), year+branch+date + ".xls");
             fos = new FileOutputStream(file);
             workbook.write(fos);
         } catch (IOException e) {

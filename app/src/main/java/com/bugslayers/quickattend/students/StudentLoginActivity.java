@@ -30,6 +30,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
 public class StudentLoginActivity extends AppCompatActivity {
 
     EditText lEmail;

@@ -10,8 +10,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.bugslayers.quickattend.R;
+
+import java.util.ArrayList;
 
 public class StudentCheckAttendance extends AppCompatActivity implements AdapterView.OnItemClickListener {
     EditText rollNumEdit;
@@ -19,8 +22,8 @@ public class StudentCheckAttendance extends AppCompatActivity implements Adapter
     Spinner yearSpinner;
     Spinner branchSpinner;
     Spinner teacherSpinner;
+    ArrayList<String> teacherName=StudentDashboard.getTeachersName();
     String yearArray[]={"FirstYear","SecondYear","ThirdYear", "FourthYear"};
-    String teacherArray[]={"Ayushman","Suman","Sameer"};
     String branchArray[]={"EE","CS","ME"};
     String roll_num;
     String branch;
@@ -53,7 +56,7 @@ public class StudentCheckAttendance extends AppCompatActivity implements Adapter
     }
 
     private void setupTeacherSpinner(Spinner teacherSpinner) {
-        ArrayAdapter<String> teacherAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,teacherArray);
+        ArrayAdapter<String> teacherAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,teacherName);
         teacherAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         teacherSpinner.setAdapter(teacherAdapter);
         teacherSpinner.setOnItemSelectedListener(new TeacherSpinner());
@@ -93,14 +96,14 @@ public class StudentCheckAttendance extends AppCompatActivity implements Adapter
 
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            teacher=teacherArray[position];
+            teacher=teacherName.get(position);
 
 
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
-            teacher=teacherArray[0];
+            teacher=teacherName.get(0);
         }
     }
     class YearSpinner implements AdapterView.OnItemSelectedListener

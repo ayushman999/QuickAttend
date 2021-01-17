@@ -46,8 +46,7 @@ public class StudentViewNoticeActivity extends AppCompatActivity implements Adap
     ArrayList<NoticeData> noticeList= new ArrayList<>();
     String yearArray[]={"FirstYear","SecondYear","ThirdYear", "FourthYear"};
     String branchArray[]={"EE","CS","ME"};
-    String teacherArray[] = {"Ayaz Ahmad","Bhandari","Mandal"};
-
+    ArrayList<String> teacherArray=StudentDashboard.getTeachersName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,12 +123,12 @@ public class StudentViewNoticeActivity extends AppCompatActivity implements Adap
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-            teacher = teacherArray[position];
+            teacher = teacherArray.get(position);
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
-            teacher = teacherArray[0];
+            teacher = teacherArray.get(0);
         }
     }
 
