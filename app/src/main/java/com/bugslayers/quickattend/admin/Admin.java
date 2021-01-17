@@ -26,8 +26,8 @@ public class Admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
 
 
-        addStudent = findViewById(R.id.add_newStudent);
-        addTeacher = findViewById(R.id.add_newTeacher);
+        addStudent = findViewById(R.id.add_student_btn);
+        addTeacher = findViewById(R.id.add_teacher_btn);
 
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
