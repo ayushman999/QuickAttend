@@ -15,6 +15,7 @@
         android:textSize="32sp"
         android:layout_margin="10dp"
         android:padding="5dp"
+        android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,35 +41,47 @@
         <EditText
             android:id="@+id/add_newTeacher"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="67dp"
+            android:paddingLeft="30dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:background="@drawable/btn_radius"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="enter your full name"
             android:inputType="textPersonName"
-            android:textColorHint="#80000000" />
+             />
 
 
 
         <EditText
             android:id="@+id/teacherEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="67dp"
+            android:paddingLeft="30dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:background="@drawable/btn_radius"
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="email address"
             android:inputType="textEmailAddress"
-            android:textColorHint="#80000000" />
+             />
 
         <EditText
             android:id="@+id/teacherPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="67dp"
+            android:paddingLeft="30dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:background="@drawable/btn_radius"
             android:layout_marginBottom="30dp"
             android:ems="10"
             android:hint="password"
             android:inputType="textPassword"
-            android:textColorHint="#80000000" />
+             />
     </LinearLayout>
 
     <ProgressBar
@@ -80,10 +93,11 @@
 
     <Button
         android:id="@+id/registerTeacher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="68dp"
         android:layout_gravity="center"
-        android:textSize="15dp"
         android:padding="10dp"
-        android:text="Register" />
+        android:background="@drawable/btn_radius"
+        android:text="Register"
+        android:textSize="19dp" />
 </LinearLayout>

@@ -15,6 +15,7 @@
     android:text="Register Student"
     android:textSize="32sp"
     android:layout_margin="10dp"
+    android:textStyle="bold"
     android:padding="5dp"
     android:gravity="center"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -37,47 +38,63 @@
     android:layout_marginRight="30dp"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="enter your full name"
-        android:inputType="textPersonName"
-        android:textColorHint="#80000000" />
+        <EditText
+            android:id="@+id/editTextFullName"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:paddingLeft="30dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:background="@drawable/btn_radius"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+             />
 
     <EditText
         android:id="@+id/editTextBranch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
+        android:paddingLeft="30dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:background="@drawable/btn_radius"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:hint="branch "
+        android:hint="Enter Your Branch "
         android:inputType="text"
         android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#80000000" />
+        />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
+        android:paddingLeft="30dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:background="@drawable/btn_radius"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:hint="email address"
+        android:hint="Email address"
         android:inputType="textEmailAddress"
-        android:textColorHint="#80000000" />
+         />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
+        android:paddingLeft="30dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:background="@drawable/btn_radius"
         android:layout_marginBottom="30dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="Enter your Password"
         android:inputType="textPassword"
-        android:textColorHint="#80000000" />
+         />
 </LinearLayout>
 
 <ProgressBar
@@ -87,14 +104,16 @@
     android:layout_gravity="center"
     android:visibility="invisible" />
 
-<Button
-    android:id="@+id/registerUser"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:textSize="15dp"
-    android:padding="10dp"
-    android:text="Register" />
+    <Button
+        android:id="@+id/registerUser"
+        android:layout_width="307dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_radius"
+
+        android:padding="10dp"
+        android:text="Register"
+        android:textSize="20sp" />
 
 
 </LinearLayout>

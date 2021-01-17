@@ -7,20 +7,6 @@
     tools:context=".activity.LightAttend">
 
     <Button
-        android:id="@+id/create_room"
-        android:layout_width="200dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="364dp"
-        android:layout_marginBottom="57dp"
-        android:text="Create Room"
-        android:background="@drawable/btn_radius"
-        app:layout_constraintBottom_toTopOf="@+id/enter_light_room"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/enter_light_room"
         android:layout_width="200dp"
         android:layout_height="72dp"
@@ -30,12 +16,30 @@
         android:layout_marginEnd="107dp"
         android:layout_marginRight="107dp"
         android:layout_marginBottom="167dp"
-        android:text="Enter Room"
         android:background="@drawable/btn_radius"
+        android:text="Enter Room"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/create_room"
+        android:layout_width="200dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginRight="107dp"
+        android:background="@drawable/btn_radius"
+        android:text="Create Room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573" />
 
     <EditText
         android:id="@+id/room_Id"
@@ -47,17 +51,19 @@
         android:layout_marginEnd="62dp"
         android:layout_marginRight="62dp"
         android:layout_marginBottom="125dp"
-        android:ems="10"
-        android:textColorHint="#fff"
-        android:textColor="#fff"
-        android:paddingLeft="30dp"
         android:background="@drawable/btn_radius"
+        android:ems="10"
         android:hint="Enter your unique Room ID"
         android:inputType="textPersonName"
+        android:paddingLeft="30dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toTopOf="@+id/create_room"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
 
     <TextView
         android:id="@+id/textView10"
@@ -78,4 +84,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button formSheet;
     Button noticeView;
     Button lightAttend;
+    Button addNotice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         formSheet=(Button) findViewById(R.id.sheet_form);
         noticeView = (Button) findViewById(R.id.view_notices_list);
         lightAttend=(Button) findViewById(R.id.teacher_light_attend);
+        addNotice=(Button) findViewById(R.id.add_notice);
         takeAttendance.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -31,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(transfer);
                 }
             });
+        addNotice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent transfer=new Intent(MainActivity.this,AddNoticeActivity.class);
+                startActivity(transfer);
+            }
+        });
         formSheet.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

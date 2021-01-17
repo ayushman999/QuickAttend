@@ -5,38 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".students.StudentDashboard">
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="275dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:text="Dashboard"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
 
     <Button
         android:id="@+id/send_student_lightattend"
-        android:layout_width="218dp"
-        android:layout_height="65dp"
+        android:layout_width="291dp"
+        android:layout_height="63dp"
+        android:background="@drawable/btn_radius"
         android:text="Light Attend"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.354" />
 
     <Button
         android:id="@+id/send_student_notice"
-        android:layout_width="218dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="291dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/btn_radius"
         android:text="Check Notice"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/send_student_lightattend" />
 
     <Button
         android:id="@+id/student_check_attendance"
-        android:layout_width="218dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="291dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/btn_radius"
         android:text="Check Attendance"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/send_student_notice" />
 </androidx.constraintlayout.widget.ConstraintLayout>

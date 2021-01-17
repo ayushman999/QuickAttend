@@ -16,7 +16,7 @@ import com.bugslayers.quickattend.model.AttendanceData;
 import java.util.ArrayList;
 
 public class TakeAttendance extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    Button takeAttendance,openactivity,addNotice;
+    Button takeAttendance;
     String year;
     String branch;
     Spinner yearSpinner;
@@ -28,10 +28,6 @@ public class TakeAttendance extends AppCompatActivity implements AdapterView.OnI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_attendance);
         takeAttendance=(Button) findViewById(R.id.add_student);
-
-        openactivity = (Button)findViewById(R.id.open_activity);
-        addNotice = (Button) findViewById(R.id.addnotice);
-
         yearSpinner=(Spinner) findViewById(R.id.take_attendance_year);
         branchSpinner=(Spinner) findViewById(R.id.take_attendance_branch);
         setupYearSpinner(yearSpinner);
@@ -46,21 +42,6 @@ public class TakeAttendance extends AppCompatActivity implements AdapterView.OnI
             }
         });
 
-        openactivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent transfer=new Intent(TakeAttendance.this,MainActivity.class);
-                startActivity(transfer);
-            }
-        });
-
-        addNotice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent transfer=new Intent(TakeAttendance.this,AddNoticeActivity.class);
-                startActivity(transfer);
-            }
-        });
 
     }
 
