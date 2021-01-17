@@ -29,7 +29,7 @@ public class StudentDashboard extends AppCompatActivity {
         sendNoticeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent transfer=new Intent(StudentDashboard.this, NoticeListActivity.class);
+                Intent transfer=new Intent(StudentDashboard.this, StudentViewNoticeActivity.class);
                 startActivity(transfer);
             }
         });

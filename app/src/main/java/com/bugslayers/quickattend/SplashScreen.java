@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.bugslayers.quickattend.activity.Dashboard;
+import com.bugslayers.quickattend.activity.IntroActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent transfer=new Intent(SplashScreen.this, Dashboard.class);
+                Intent transfer=new Intent(SplashScreen.this, IntroActivity.class);
                 startActivity(transfer);
                 finish();
             }

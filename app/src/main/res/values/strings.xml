@@ -27,4 +27,11 @@
         <item>2k19</item>
         <item>2k20</item>
     </string-array>
+
+    <string name="intro_details">QuickAttend Live Attendance
+    </string>
+    <string name="intro_1">Manage Teacher and Student information</string>
+    <string name="intro_2">Course Allocation System</string>
+    <string name="intro_3">Take live Attendance</string>
+
 </resources>
