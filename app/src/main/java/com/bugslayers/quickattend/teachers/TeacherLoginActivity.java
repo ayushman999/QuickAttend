@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bugslayers.quickattend.R;
+import com.bugslayers.quickattend.activity.MainActivity;
 import com.bugslayers.quickattend.activity.TakeAttendance;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,6 +27,7 @@ public class TeacherLoginActivity extends AppCompatActivity {
     EditText e;
     Button b1;
     String TAG="abcd";
+    static String name;
 
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -58,7 +60,7 @@ public class TeacherLoginActivity extends AppCompatActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                String name="";
+
 
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
@@ -75,9 +77,8 @@ public class TeacherLoginActivity extends AppCompatActivity {
                     name=teachersName.get(i);
 
                     Log.d(TAG,"Name is "+name);
-                    Intent transfer = new Intent(TeacherLoginActivity.this, TakeAttendance.class);
+                    Intent transfer = new Intent(TeacherLoginActivity.this, MainActivity.class);
                     transfer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    transfer.putExtra("NAME",name);
                     startActivity(transfer);
                     finish();
                 }
@@ -89,10 +90,14 @@ public class TeacherLoginActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(TeacherLoginActivity.this, "mmmm", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TeacherLoginActivity.this, "Something went wrong...", Toast.LENGTH_SHORT).show();
             }
         });
 
 
+    }
+    public static String getTeacherName()
+    {
+        return name;
     }
 }

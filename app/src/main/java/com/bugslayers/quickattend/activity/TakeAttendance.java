@@ -21,7 +21,6 @@ public class TakeAttendance extends AppCompatActivity implements AdapterView.OnI
     String branch;
     Spinner yearSpinner;
     Spinner branchSpinner;
-    ArrayList<AttendanceData> students;
     String yearArray[]={"FirstYear","SecondYear","ThirdYear", "FourthYear"};
     String branchArray[]={"EE","CS","ME"};
     @Override

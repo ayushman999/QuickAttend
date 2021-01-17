@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.bugslayers.quickattend.R;
-import com.bugslayers.quickattend.model.LightData;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button dashboard;
+    Button takeAttendance;
     Button formSheet;
     Button noticeView;
     Button lightAttend;
@@ -21,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dashboard=(Button) findViewById(R.id.dashboard);
+        takeAttendance =(Button) findViewById(R.id.dashboard);
         formSheet=(Button) findViewById(R.id.sheet_form);
         noticeView = (Button) findViewById(R.id.view_notices_list);
         lightAttend=(Button) findViewById(R.id.teacher_light_attend);
-        dashboard.setOnClickListener(new View.OnClickListener() {
+        takeAttendance.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent transfer=new Intent(MainActivity.this, Dashboard.class);
+                    Intent transfer=new Intent(MainActivity.this, TakeAttendance.class);
                     startActivity(transfer);
                 }
             });

@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="1902047"
         android:gravity="center"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/ligh_blue"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

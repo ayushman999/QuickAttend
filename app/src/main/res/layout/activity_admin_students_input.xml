@@ -5,27 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.AdminStudentsInput">
-
     <Spinner
         android:id="@+id/admin_student_branch"
-        android:layout_width="190dp"
+        android:layout_width="182dp"
         android:layout_height="55dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/btn_radius"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/admin_student_year"
-        android:layout_width="190dp"
+        android:layout_width="182dp"
         android:layout_height="55dp"
+        android:background="@drawable/btn_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <Button
         android:id="@+id/add_student"
@@ -35,38 +36,66 @@
         android:layout_marginLeft="86dp"
         android:layout_marginEnd="87dp"
         android:layout_marginRight="87dp"
+
+        android:background="@drawable/btn_radius"
         android:text="Add Student"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias="0.766" />
 
     <EditText
         android:id="@+id/admin_student_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
-        android:layout_marginBottom="67dp"
+        android:layout_width="354dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="324dp"
+        android:background="@drawable/btn_radius"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Enter Name"
+        android:textColor="#fff"
         android:inputType="textPersonName"
+        android:paddingLeft="40dp"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toTopOf="@+id/add_student"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin_student_roll_num" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/admin_student_roll_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="69dp"
+        android:background="@drawable/btn_radius"
         android:ems="10"
-        android:hint="Roll Number"
+        android:hint="Enter Roll Number"
         android:inputType="number"
+        android:paddingLeft="55dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="248dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:text="Add Student"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

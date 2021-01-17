@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bugslayers.quickattend.R;
+import com.bugslayers.quickattend.teachers.TeacherLoginActivity;
 
 public class ViewAttendanceRecords extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -19,14 +20,11 @@ public class ViewAttendanceRecords extends AppCompatActivity implements AdapterV
     //FirebaseFirestore db;
     Spinner yearSpinner;
     Spinner branchSpinner;
-    Spinner teacherSpinner;
     String branch;
     String year;
-    String teacher;
     String yearArray[] = {"FirstYear", "SecondYear", "ThirdYear", "FourthYear"};
-    String branchArray[] = {"EE", "CS", "ME", "CSE", "Imsc"};
-    String teacherArray[] = {"Ayushman", "Sameer", "Suman"};
-
+    String branchArray[] = {"EE", "CS", "ME" };
+    static String teacher= TeacherLoginActivity.getTeacherName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +36,10 @@ public class ViewAttendanceRecords extends AppCompatActivity implements AdapterV
 
         yearSpinner = (Spinner) findViewById(R.id.spinner_batch);
         branchSpinner = (Spinner) findViewById(R.id.spinner_branch);
-        teacherSpinner = (Spinner) findViewById(R.id.spinner_teacher);
         attendance = (Button) findViewById(R.id.view_atttendance);
 
         setupYearSpinner(yearSpinner);
         setupBranchSpinner(branchSpinner);
-        setupTeacherSpinner(teacherSpinner);
 
         attendance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,12 +72,6 @@ public class ViewAttendanceRecords extends AppCompatActivity implements AdapterV
         branchSpinner.setOnItemSelectedListener(new ViewAttendanceRecords.BranchSpinner());
     }
 
-    private void setupTeacherSpinner(Spinner teacherSpinner) {
-        ArrayAdapter<String> teacherAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, teacherArray);
-        teacherAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        teacherSpinner.setAdapter(teacherAdapter);
-        teacherSpinner.setOnItemSelectedListener(new ViewAttendanceRecords.TeacherSpinner());
-    }
 
 
     class BranchSpinner implements AdapterView.OnItemSelectedListener {
@@ -112,19 +102,6 @@ public class ViewAttendanceRecords extends AppCompatActivity implements AdapterV
         }
     }
 
-    class TeacherSpinner implements AdapterView.OnItemSelectedListener {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-
-            teacher = teacherArray[position];
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-            teacher = teacherArray[0];
-        }
-    }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

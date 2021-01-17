@@ -19,6 +19,7 @@ import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.adapter.SwipeAdapter;
 import com.bugslayers.quickattend.model.AttendanceData;
 import com.bugslayers.quickattend.model.Students;
+import com.bugslayers.quickattend.teachers.TeacherLoginActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
@@ -40,6 +41,7 @@ public class SwipeList extends AppCompatActivity {
     SwipeAdapter swipeAdapter;
     int temp;
     String tempName;
+    static String teacherName= TeacherLoginActivity.getTeacherName();
     RecyclerView.LayoutManager layoutManager;
     ArrayList<Students> list=new ArrayList<>();
     ArrayList<String> name=new ArrayList<>();
@@ -80,7 +82,8 @@ public class SwipeList extends AppCompatActivity {
     private void uploadAttendanceData(String branch, String year) {
         Collections.sort(attendanceList);
         String date= LocalDate.now().toString();
-        dataTransfer=firestore.collection(branch).document(year).collection("Ayushman").document(date);
+        Toast.makeText(this, teacherName, Toast.LENGTH_SHORT).show();
+        dataTransfer=firestore.collection(branch).document(year).collection(teacherName).document(date);
         Map<String,Object> data=new HashMap<>();
         data.put("name",name);
         data.put("roll_num",roll_num);

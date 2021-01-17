@@ -21,6 +21,8 @@
             android:id="@+id/datepicker_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_radius"
             android:layout_marginHorizontal="10dp"
             android:text="Choose Date" />
 
@@ -37,6 +39,7 @@
             android:id="@+id/get_attendanceData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_radius"
             android:layout_marginHorizontal="10dp"
             android:text="Get Data" />
 
@@ -102,6 +105,7 @@
         android:layout_width="227dp"
         android:layout_height="53dp"
         android:text="Get Excel"
+        android:background="@drawable/btn_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
