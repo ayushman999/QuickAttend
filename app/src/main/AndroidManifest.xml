@@ -39,7 +39,9 @@
         <activity android:name=".students.StudentRegisterActivity" />
         <activity android:name=".teachers.TeacherProfile" />
         <activity android:name=".teachers.TeacherLoginActivity" />
-        <activity android:name=".activity.AdminStudentsInput" />
+        <activity android:name=".activity.AdminStudentsInput" >
+
+        </activity>
         <activity android:name=".activity.Dashboard" />
         <activity android:name=".activity.ViewAttendanceRecords" />
         <activity android:name=".activity.SplashActivity"></activity>

@@ -3,6 +3,7 @@ package com.bugslayers.quickattend.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.bugslayers.quickattend.R;
 import com.bugslayers.quickattend.students.StudentLoginActivity;
+import com.bugslayers.quickattend.teachers.TeacherLoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -57,7 +59,9 @@ public class teacherRegisterActivity extends AppCompatActivity {
 
     private void registerTeacher() {
 
-        if (email.isEmpty()) {
+        if(name.isEmpty()){
+            Toast.makeText(this, "Enter your name!", Toast.LENGTH_SHORT).show();
+        } else if (email.isEmpty()) {
             Toast.makeText(this, "Enter your email!", Toast.LENGTH_SHORT).show();
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             Toast.makeText(this, "Enter a valid email address!", Toast.LENGTH_SHORT).show();
@@ -98,9 +102,9 @@ public class teacherRegisterActivity extends AppCompatActivity {
                                         if(task.isSuccessful()){
                                             Toast.makeText(teacherRegisterActivity.this,"User has been successfully registered",Toast.LENGTH_LONG).show();
                                             progressDialog.dismiss();
-                                            Intent intent=new Intent(teacherRegisterActivity.this,  StudentLoginActivity.class);
+                                            Intent intent=new Intent(teacherRegisterActivity.this, TeacherLoginActivity.class);
                                             startActivity(intent);
-                                            finish();
+                                            
                                         }else{
                                             Toast.makeText(teacherRegisterActivity.this,"Failed to register! Try Again!!",Toast.LENGTH_LONG).show();
                                             progressDialog.dismiss();
