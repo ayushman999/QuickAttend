@@ -50,15 +50,22 @@ public class AdminStudentsInput extends AppCompatActivity implements AdapterView
             public void onClick(View v) {
                 name=nameEdit.getText().toString();
                 roll_num=roll_numEdit.getText().toString();
-                addStudentData(name,roll_num,year);
 
+                if (name.equals("") || roll_num.equals("")) {
+                    Toast.makeText(AdminStudentsInput.this, "fill all fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    addStudentData(name, roll_num, year);
+                }
             }
         });
     }
 
     private void addStudentData(String name, String roll_num,  String year) {
-        int roll=Integer.parseInt(roll_num);
-        Students student=new Students(name,roll);
+
+
+
+        int roll = Integer.parseInt(roll_num);
+        Students student = new Students(name, roll);
         studentRef.document(branch).collection(year).document(roll_num).set(student).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
@@ -66,10 +73,11 @@ public class AdminStudentsInput extends AppCompatActivity implements AdapterView
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure( Exception e) {
+            public void onFailure(Exception e) {
                 Toast.makeText(AdminStudentsInput.this, "Something went wrong...", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     private void setupBranchSpinner(Spinner branchSpinner) {

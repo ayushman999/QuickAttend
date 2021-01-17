@@ -57,7 +57,6 @@
         android:hint="Enter Name"
         android:inputType="textPersonName"
         android:paddingLeft="40dp"
-        android:textColor="#fff"
         android:textColorHint="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"

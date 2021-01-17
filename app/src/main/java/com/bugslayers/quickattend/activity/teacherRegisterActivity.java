@@ -3,6 +3,7 @@ package com.bugslayers.quickattend.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -63,7 +64,9 @@ public class teacherRegisterActivity extends AppCompatActivity {
 
     private void registerTeacher() {
 
-        if (email.isEmpty()) {
+        if(name.isEmpty()){
+            Toast.makeText(this, "Enter your name!", Toast.LENGTH_SHORT).show();
+        } else if (email.isEmpty()) {
             Toast.makeText(this, "Enter your email!", Toast.LENGTH_SHORT).show();
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             Toast.makeText(this, "Enter a valid email address!", Toast.LENGTH_SHORT).show();
@@ -102,7 +105,7 @@ public class teacherRegisterActivity extends AppCompatActivity {
                                     Toast.makeText(teacherRegisterActivity.this, "Data Uploaded", Toast.LENGTH_SHORT).show();
                                     Intent intent=new Intent(teacherRegisterActivity.this,  TeacherLoginActivity.class);
                                     startActivity(intent);
-                                    finish();
+
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
