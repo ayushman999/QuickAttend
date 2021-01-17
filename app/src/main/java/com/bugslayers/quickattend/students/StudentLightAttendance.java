@@ -22,19 +22,19 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class StudentLightAttendance extends AppCompatActivity {
-    EditText roomIdEdit,nameEdit,emailEdit,phoneNumEdit;
+    EditText roomIdEdit,nameEdit,phoneNumEdit;
     Button sendData;
     String roomId,name,email,phoneNum;
     CollectionReference roomRef;
     FirebaseFirestore firestore;
     String validity;
+    static String studentEmail=StudentLoginActivity.getEmail();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_light_attendance);
         roomIdEdit=(EditText) findViewById(R.id.light_student_room_id);
         nameEdit=(EditText) findViewById(R.id.light_student_name);
-        emailEdit=(EditText) findViewById(R.id.light_student_email);
         phoneNumEdit=(EditText) findViewById(R.id.light_student_phone_num);
         sendData=(Button) findViewById(R.id.light_student_button);
         firestore=FirebaseFirestore.getInstance();
@@ -74,10 +74,10 @@ public class StudentLightAttendance extends AppCompatActivity {
 
     private void addStudentFirestore() {
         if(validity.equals("online")) {
-            LightData data = new LightData(name, phoneNum, email);
-            roomRef.document(roomId).collection("Attendees").add(data).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            LightData data = new LightData(name, phoneNum, studentEmail);
+            roomRef.document(roomId).collection("Attendees").document(studentEmail).set(data).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
-                public void onSuccess(DocumentReference documentReference) {
+                public void onSuccess(Void unused) {
                     Toast.makeText(StudentLightAttendance.this, "You are in!", Toast.LENGTH_SHORT).show();
                     finish();
                 }
@@ -100,6 +100,5 @@ public class StudentLightAttendance extends AppCompatActivity {
         roomId=roomIdEdit.getText().toString();
         name=nameEdit.getText().toString();
         phoneNum=phoneNumEdit.getText().toString();
-        email=emailEdit.getText().toString();
     }
 }

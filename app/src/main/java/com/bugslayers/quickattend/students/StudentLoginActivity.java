@@ -36,6 +36,7 @@ public class StudentLoginActivity extends AppCompatActivity {
     EditText lPassword;
     Button lLogin;
     TextView lSignUp;
+    static String email;
     TextView reset_link;
     FirebaseAuth mFirebaseAuth;
     ConstraintLayout layout;
@@ -83,7 +84,7 @@ public class StudentLoginActivity extends AppCompatActivity {
 
 
     private void callLogin() {
-        String email = lEmail.getText().toString().trim();
+        email = lEmail.getText().toString().trim();
         String password = lPassword.getText().toString().trim();
         if (email.isEmpty()) {
             Toast.makeText(this, "Enter your email!", Toast.LENGTH_SHORT).show();
@@ -152,4 +153,8 @@ public class StudentLoginActivity extends AppCompatActivity {
 //                    finish();
 //                }
 //            }
+    public static String getEmail()
+    {
+        return email;
+    }
         }

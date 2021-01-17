@@ -30,7 +30,6 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Dashboard.this, AdminLoginActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -39,7 +38,6 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Dashboard.this, TeacherLoginActivity.class);
                 startActivity(intent);
-                finish();
 
             }
         });
@@ -48,7 +46,6 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Dashboard.this, StudentLoginActivity.class);
                 startActivity(intent);
-                finish();
 
             }
         });

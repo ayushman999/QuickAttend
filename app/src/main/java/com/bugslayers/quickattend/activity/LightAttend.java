@@ -23,6 +23,7 @@ import java.util.HashMap;
 
 public class LightAttend extends AppCompatActivity {
     Button createRoomBtn;
+    Button enterRoomBtn;
     FirebaseFirestore firestore;
     CollectionReference room;
     EditText roomIdEdit;
@@ -34,6 +35,7 @@ public class LightAttend extends AppCompatActivity {
         setContentView(R.layout.activity_light_attend);
         roomIdEdit=(EditText) findViewById(R.id.room_Id);
         createRoomBtn=(Button) findViewById(R.id.create_room);
+        enterRoomBtn=(Button) findViewById(R.id.enter_light_room);
         firestore=FirebaseFirestore.getInstance();
         room=firestore.collection("LightAttend");
         createRoomBtn.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +45,47 @@ public class LightAttend extends AppCompatActivity {
                 roomId=roomIdEdit.getText().toString();
                 checkForExistingRoom();            }
         });
+        enterRoomBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exist=false;
+                roomId=roomIdEdit.getText().toString();
+                checkExistance();
+
+            }
+
+
+        });
+    }
+
+    private void checkExistance() {
+        room.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for(QueryDocumentSnapshot snapshot:queryDocumentSnapshots)
+                {
+                    String id=snapshot.getId();
+
+                    if(id.equals(roomId))
+                    {
+                        exist=true;
+                        enterRoom();
+                    }
+                }
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure( Exception e) {
+                Toast.makeText(LightAttend.this, "Something went wrong...", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void enterRoom() {
+        Intent transfer=new Intent(LightAttend.this,LightAttendRoom.class);
+        transfer.putExtra("roomId",roomId);
+        startActivity(transfer);
     }
 
     private void createRoomFirestore() {
