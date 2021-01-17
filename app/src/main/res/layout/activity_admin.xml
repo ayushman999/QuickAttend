@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Admin">
+    tools:context=".admin.Admin">
 
     <TextView
         android:id="@+id/textView7"
@@ -14,6 +14,7 @@
         android:layout_marginLeft="276dp"
         android:text="Admin Panel"
         android:textSize="24sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

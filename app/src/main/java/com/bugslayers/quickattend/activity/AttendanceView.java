@@ -148,7 +148,7 @@ public class AttendanceView extends AppCompatActivity implements DatePickerDialo
     }
 
     private void getAttendanceData() {
-        attendanceRef=firestore.collection(branch).document(year).collection(date).document(teacher);
+        attendanceRef=firestore.collection(branch).document(year).collection(teacher).document(date);
         attendanceRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
